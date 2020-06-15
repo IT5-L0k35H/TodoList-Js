@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(100deg,#deebf7,#3498db);
+    color: white;
+    font-family: "Poppins",sans-serif;
+    min-height: 100vh;
+}
+
+header, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input{
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    border: none;
+    background: white;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    color:#3498db; 
+}
+
+form button{
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    color:#3498db; 
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    border: none;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover{
+     color: white;
+     background-color: #3498db;
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: #3498db;
+    font-size: 1.25rem;
+    
+    display: flex;
+    border-radius: 4px;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+    
+}
+
+.todo li{
+    flex: 1;
+}
+.trash-btn,.complete-btn{
+    background: #ff6f47;
+    color: white;
+    padding: 1rem;
+    border: none;
+    font-size: 1rem;
+   
+    cursor: pointer;
+}
+
+.trash-btn{
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    
+}
+.complete-btn{
+    background: rgb(73, 204, 73);
+}
+
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash,.fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.fall{
+    transform:  translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    padding: 0.75rem;
+    
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #3498db;
+    width: 10rem;
+    cursor: pointer;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #3498db;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    top: 0;
+    right: 0;
+    padding: 0.60rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after{
+    background: white;
+    color: #3498db;
+}
